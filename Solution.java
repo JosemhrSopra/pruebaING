@@ -16,7 +16,7 @@ public class Solution {
 
 	public static int[] solution(int K, int M, int[] A) {
 		return solutionLambda(K, M, A);
-    // return solutionClassic(K, M, A);
+             // return solutionClassic(K, M, A);
 	}
 
 	public static int[] solutionLambda(int K, int M, int[] A) {
@@ -69,12 +69,12 @@ public class Solution {
 		for (int i = 0; i + K <= A.length; i++) {
 			aux = A.clone();
 
-			// Suma +1 al subconjunto
+			// Add +1 at range
 			for (int j = i; j < i + K; j++) {
 				aux[j]++;
 			}
 
-			// Buscamos Leader y agregamos en caso que haya
+			// Find Leader and add leader to result
 			Arrays.sort(aux);
 			int count = 1;
 			for (int k = 1; k < aux.length; k++) {
